@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mb-4">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link me-3" aria-current="page" href="/program/show-all-programs">All Progarams</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/program/update-program-page/{{this.program.pro_id}}">Update Program</a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="container">
+        <form action="/program/modify-program-page" method="post" class="myForm">
+            <div class="mb-3">
+                <label for="id" class="form-label">Program ID</label>
+                <input type="text" class="form-control" value="{{this.program.pro_id}}" id="id" name="id">
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Student Name</label>
+                <input type="text" class="form-control" value="{{this.program.pro_name}}" id="name" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="duration" class="form-label">Program Duration</label>
+                <input type="text" class="form-control" value="{{this.program.pro_duration}}" id="duration" name="duration">
+            </div>
+            <div class="mb-3">
+                <label for="fee" class="form-label">Program Fee</label>
+                <input type="text" class="form-control" value="{{this.program.pro_fee}}" id="fee" name="fee"> 
+            </div>
+            <div class="btn">
+                <button class="btn btn-primary" type="submit">Update</button>
+                <button class="btn btn-warning" type="reset">Reset</button>
+            </div>
+            
+        </form>
+        
+    </div>
+</body>
+</html>

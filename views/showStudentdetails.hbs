@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active me-3" aria-current="page" href="/student/student-show-page">All Student</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/student/student-add-page">Add Student</a>
+            </li>
+        </ul>
+    </div>
+    <table class="table-bordered table table-hover text-center mt-5">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Gender</th>
+                <th>Option</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each rows}}
+            <tr>
+                <td>{{this.st_id}}</td>
+                <td>{{this.st_name}}</td>
+                <td>{{this.st_address}}</td>
+                <td>{{this.gender}}</td>
+                <td>
+                    <a href="/student/show-data-page/{{this.st_id}}" class="btn btn-primary">Show Data</a>
+                    <a href="/student/delete-student-page/{{this.st_id}}" class="btn btn-danger">Delete</a>
+                    <a href="/student/update-student-page/{{this.st_id}}" class="btn btn-warning">Update</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>

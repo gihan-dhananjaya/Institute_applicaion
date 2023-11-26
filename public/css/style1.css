@@ -1,0 +1,71 @@
+body{
+    width: 100%;
+    
+}
+.title{
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(43, 2, 73);
+    color: white;
+}
+
+h1{
+    color: white;
+    font-size: 48px;
+    text-align: center;
+}
+.mycard{
+    margin-left: auto;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.mycard img{
+    
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+.card{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.gender, .payment{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.myForm{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.myForm .btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    width: 150px;
+    font-size: 20px;
+}
+.form-group{
+    margin-bottom: 1.5rem;
+}
+
+.regForm label{
+    margin-bottom: 1rem;
+}
